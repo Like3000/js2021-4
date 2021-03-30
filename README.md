@@ -2,7 +2,7 @@
 ## [03월 23일]
 #### 논리 연산자<br/>
 
-######! 	논리부정 연산자<br/>
+###### ! 	논리부정 연산자<br/>
 >ex)<br/>
 console.log(!true);		false<br/>
 console.log(!false);		true<br/>
