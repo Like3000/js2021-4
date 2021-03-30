@@ -15,6 +15,7 @@ switch (a % 3){<br>
     case 2:<br>
         console.log("나머지 2")<br>
 }<br>
+"나머지 1"<br>
 
 #### 삼항 연산자
 >if문과 switch문 이외에 조건을 구분할때 사용할 수 있는 문법<br>
