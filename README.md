@@ -2,22 +2,22 @@
 ## [03월 23일]
 #### 논리 연산자<br/>
 
->! 	논리부정 연산자<br/>
-ex)<br/>
+######! 	논리부정 연산자<br/>
+>ex)<br/>
 console.log(!true);		false<br/>
 console.log(!false);		true<br/>
 console.log(!(123>13))	false<br/>
 console.log(!(123<12))	true<br/>
 
->||	논리합 연산자<br/>
-ex)<br/>
+###### ||	논리합 연산자<br/>
+>ex)<br/>
 true true = true<br/>
 true flase = true<br/>
 false true = true<br/>
 false false = false<br/>
 
->&&	논리곱 연산자<br/>
-ex)<br/>
+###### &&	논리곱 연산자<br/>
+>ex)<br/>
 true true = true<br/>
 true flase = false<br/>
 false true = false<br/>
