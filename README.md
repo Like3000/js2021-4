@@ -1,4 +1,44 @@
 # 강태훈 [201840104]
+## [04월 06일]
+#### 역 for 반복문
+>배열을 뒤에서부터 실행할때 사용<br>
+ex)<br>
+let array = [1,2,3,4,5,6];<br>
+for(let i = array.length -1;i>=0;i--){<br>
+    console.log(array[i]);<br>
+}<br>
+
+#### for in 반복문과 for of 반복문
+>객체에 쉽게 반복문을 적용할 때 사용<br>
+사용과 역할이 같음<br>
+
+#### 중첩 반복문
+>중첩 조건문처럼 여러번 중첩해서 사용하는 반복문<br>
+ex) 별찍기<br>
+let star = "";<br>
+for(let i =0; i< 10; i++){<br>
+    for(let j =0; j< i+1;j++ ){<br>
+        star += "*";<br>
+    }<br>
+    star +="\n";<br>
+}<br>
+console.log(star);<br>
+
+#### break
+>조건문이나 반복문을 벗어날때 사용<br>
+무한반복문은 break를 사용해야 벗어날 수 있음<br>
+
+#### continue
+>반복문 내부에서 현재 반복을 멈추고 다음 반복을 진행하게 함<br>
+ex)<br>
+for(let i = 1;i < 10; i++){<br>
+    if(i%2 ==0){<br>
+        continue;<br>
+    }<br>
+    console.log(i)<br>
+}<br>
+
+
 ## [03월 30일]
 #### switch
 >if문과 비슷하지만 사용방법1개에 변수 값이 여러개 있을때 사용<br>
