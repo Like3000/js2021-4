@@ -1,6 +1,6 @@
-for(let i = 1;i < 10; i++){
-  if(i%2 ==0){
-      continue;
-  }
-  console.log(i)
+let abc= function(){
+  console.log("ㅁㄴㅇㄹ");
+  console.log("ㄴㅇㄹ");
 }
+abc();
+console.log(abc);
