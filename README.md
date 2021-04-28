@@ -31,13 +31,6 @@ let=obj{<br> //객체 선언
 }<br>
 obj.print();<br> //메소드 호출
 
-#### 생성자 함수
->객체를 만드는 함수<br>
-ex)<br>
-function Product(name,price){<br>
-this.name = name;<br>
-this.price = price;<br>
-}<br>
 
 ## [04월 13일]
 #### 익명 함수
