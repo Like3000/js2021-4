@@ -21,6 +21,23 @@ price:1200<br>
 속성 : 객체 내부에 있는 값<br>
 메소드 : 객체의 속성중 자료형이 함수인 속성<br>
 자신이 가지고 있는 속성이라는것을 표시할때 this 키워드 사용<br>
+ex)<br>
+let=obj{<br> //객체 선언
+    name:'바나나',<br>
+    price:1200, <br>
+    print:function(){<br>
+        console.log('${this.name}의 가격은 ${this.price}원입니다)<br>
+    }<br>
+}<br>
+obj.print();<br> //메소드 호출
+
+#### 생성자 함수
+>객체를 만드는 함수<br>
+ex)<br>
+function Product(name,price){<br>
+this.name = name;<br>
+this.price = price;<br>
+}<br>
 
 ## [04월 13일]
 #### 익명 함수
