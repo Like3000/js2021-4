@@ -1,4 +1,74 @@
 # 강태훈 [201840104]
+## [05월 04일]
+#### 생성자 함수
+>객체를 만드는 함수<br>
+ex)<br>
+function Product(name,price){<br>
+this.name = name;<br>
+this.price = price;<br>
+}<br>
+
+#### 프로토타입
+>생성자 함수로 만든 객체에는 프로토 타입이라는 공간에<br> 
+메소드를 지정해서 모든 객체가 공유 하도록 만들수 있음<br>
+프로토타입은 모든 함수가 가지고 있는 속성으로 해당 함수를 생성자 함수로 사용했을 때만 의미가있음<br>
+ex)<br>
+funtion Product(name,price){<br>
+    this.name=name<br>
+    this.price=price<br>
+}<br>
+Product.prototype.print = function(){<br>
+    console.log('${this.name}의 가격은 ${this.price}원입니다.')<br>
+} <br>
+let products = {<br>
+    new Product("바나나",1200)<br>
+    new Product("사과",2000)<br>
+    new Product("배",3000)<br>
+    new Product("고구마",700)<br>
+    new Product("감자",600)<br>
+    new Product("수박",500)<br>
+    }<br>
+for (let product of products){<br>
+    product.print()<br>
+}<br>
+
+#### 기본 자료형과 객체 자료형의 차이
+>js에서는 문자열,숫자,불을 기본자료형이라고 함<br>
+기본 자료형의 속성 또는 메소드를 사용할 때 기본 자료형이 자동으로 객체로 변환됨<br>
+기본 자료형은 객체가아니므로 속성과 메소드를 추가할 수 없음<br>
+method() 라는 이름의 메소드를 추가하면 사용가능<br>
+
+#### Number객체
+>js에서 숫자를 표현할 때 사용<br>
+메소드 와 생성자 함수의 속성으로 생성할수 있음<br>
+-생성자 함수의 속성<br>
+MAX_VALUE   JS에서 나타낼수 있는 최대 숫자<br> 
+MIN_VALUE   JS에서 나타낼수 있는 최소 숫자<br>
+NaN         JS에서 나타낼수 없는 숫자<br>
+POSITIVE_INFINITY   양의 무한대 숫자<br>
+NEGATIVE_INFINITY   음의 무한대 숫자<br>
+
+#### String 객체
+>String 객체는 length 속성을 가짐<br>
+자기자신을 변화시키는 메소드를 '파괴적 메소드'라고하며<br>
+자기자신을 변화시키지 않고 리턴하는 메소드를 '비파괴적 메소드'라고함<br>
+-String 객체의 메소드<br>
+charAt(position)        position에 위치하는 문자를 리턴<br>
+chatCodeAt(position)    position에 위치하는 문자의 유니코드 번호를 리턴<br>
+concat(args)            매개변수로 입력한 문자열을 이어 리턴<br>
+indexOf(searchString,position) 앞에서부터 일치하는 문자열의 위치를 리턴<br>
+lastIndexOf(searchString,position) 뒤에서부터 일치하는 문자열의 위치를 리턴<br>
+match(regExp)           문자열 안에 regExp가 있는지 확인<br>
+replace(regExp, replacement) regExp를 replacement로 바꾼 후 리턴<br>
+search(regExp)          regExp와 일치하는 문자열의 위치를 리턴<br>
+slice(start,end)        특정 위치의 문자열을 추출해 리턴<br>
+split(separator,limit)  separator로 문자열을 잘라 배열을 리턴<br>
+substr(start,count)     start부터 count만큼 문자열을 잘라서 리턴<br>
+substring(start,end)    start부터 end까지 문자열을 잘라서 리턴<br>
+toLowerCase()           문자열을 소문자로 바꾸어 리턴<br>
+toUpperCase()           문자열을 대문자로 바꾸어 리턴<br>
+
+
 ## [04월 27일]
 #### 객체
 >여러개의 자료형을 한번에 저장하는 자료형<br>
@@ -30,7 +100,6 @@ let=obj{<br> //객체 선언
     }<br>
 }<br>
 obj.print();<br> //메소드 호출
-
 
 ## [04월 13일]
 #### 익명 함수
