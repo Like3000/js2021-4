@@ -1,4 +1,76 @@
 # 강태훈 [201840104]
+## [05월 18일]
+#### 전역 변수
+>자바스크립트에서 아무런 변수를 선언하지않고 모든 고셍서 사용할 수 있는 것들을 전역 OO라고 함<br>
+
+>>__filename     현재 실행중인 코드와 파일경로를 나타냄<br>
+>>__dirname      현재 실행중인 코드의 폴더 경로를 나타냄<br>
+
+```jsx 
+ex)
+console.log(__filename);
+console.log(__dirname);
+```
+
+#### process 객체의 속성과 이벤트
+>node.js는 process객체라는 전역 객체를 제공함<br>
+프로세스 정보를 제공하며, 제어할 수 있게 하는 객체<br>
+- 객체의 속성<br>
+>>env       컴퓨터 환경 정보를 나타냄<br>
+>>version   Node.js 버전을 나타냄<br>
+>>versions  Node.js와 종속된 프로그램 버전을 나타냄<br>
+>>arch      프로세서의 아키텍처를 나타냄<br>
+>>platform  플랫폼을 나타냄<br>
+- 객체의 메소드<br>
+>>exit([exitCode = 0])  프로그램 종료<br>
+>>memoryUsage()         메모리 사용 정보 객체를 리턴<br>
+>>uptime()              현재 프로그램이 실행된 시간을 리턴<br>
+
+#### 객체와 이벤트 개요
+>JS는 이벤트를 많이 활용함<br>
+- Node.js 이벤트 연결 메소드<br>
+>>on(<이벤트이름>,<이벤트 핸들러>)    이벤트를 연결함<br>
+- process 객체에 있는 이벤트<br>
+>> exit                 프로세스가 종료될때 발생함<br>
+>> uncaughtException    예외가 일어날때 발생함<br>
+
+#### os모듈
+```jsx const os = require('os')```
+- os 모듈 메소드 <br>
+>>hostname()    운영체제의 호슽르 이름을 리턴<br>
+type()          운영체제의 이름을 리턴<br>
+flatform()      운영체제의 플랫폼을 리턴<br>
+arch()          운영체제의 아키텍처를 리턴<br>
+release()       운영체제의 버전을 리턴<br>
+uption()        운영체제가 실행된 시간을 리턴<br>
+loadavg()       로드 에버리지 정보를 담은 배열을 리턴<br>
+totalmem()      시스템의 총 메모리를 리턴<br>
+freemem()       시스템의 사용 가능한 메모리를 리턴<br>
+cpus()          CPU의 정보를 담은 객체를 리턴<br>
+getNetworkInterfaces() 네트워크 인터페이스의 정보를 담은 배열을 리턴<br>
+
+#### url 모듈
+```jsx const url = require('url')```
+- url 모듈의 메소드
+>>parse(urlStr[.parseQeryString = flase.slashesDenoteHost = flase]) URL문자열을 URL객체로 변환해 리턴<br>
+format(urlObi)      URL객체를 URL 문자열로 변환해 리턴함<br>
+resolve(from,to)    매개변수를 조합하여 완전한 URL 문자열을 생성해 리턴함<br>
+
+#### File System 모듈
+```jsx const fs = require('fs')```
+###### 파일읽기
+>>fs.readFileSync(<파일이름>)       동기적으로 파일을 읽어 들임<br>
+fs.readFile(<파일이름>,<콜백함수>)  비동기적으로 파일을 읽어 들임<br>
+###### 비동기 처리의 장점
+>js는 c++,java보다 느리지만 프로그램을 개발하는 과정에서 Node.js를 사용하면 손쉽게 비동기 처리를 구현할수 있음<br>
+기존의 웹 서버보다 10배 이상 빠르고 가볍다 라는 말도 여기서 나온 것<br>
+###### 파일쓰기
+>>fs.writeFileSync(<파일이름>,<문자열>)     동기적으로 파일을 씀<br>
+fs.writeFile(<파일이름>,<콜백함수>)         비동기적으로 파일을 씀<br>
+###### 파일처리와 예외 처리
+>동기 코드를 예외처리할때는 try catch 구문을 활용하고 , 비동기 코드를 예외 처리할 때는 콜백 함수로 전달된 첫 번째 매개 변수 error를 활용<br>
+#### 노드 패키지 매니저
+
 ## [05월 11일]
 #### DATA 객체
 >new Date()             현재 시간으로 Date 객체를 생성<br>
