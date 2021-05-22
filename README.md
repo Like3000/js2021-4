@@ -69,7 +69,36 @@ fs.readFile(<파일이름>,<콜백함수>)  비동기적으로 파일을 읽어 
 fs.writeFile(<파일이름>,<콜백함수>)         비동기적으로 파일을 씀<br>
 ###### 파일처리와 예외 처리
 >동기 코드를 예외처리할때는 try catch 구문을 활용하고 , 비동기 코드를 예외 처리할 때는 콜백 함수로 전달된 첫 번째 매개 변수 error를 활용<br>
+
 #### 노드 패키지 매니저
+>어떤 프로그래밍 플랫폼이 기본적으로 제공하는 모듈을 '내부 모듈'이라고 함<br>
+반면 개인 개발자가 내부 모듈을 조합해서 사용하기 쉬운 형태로 만들거나 새로운 기능을 구현해서 제공하는 것을 '외부 모듈'이라고 함<br>
+Node.js는 npm(Node.js Package Manager)을 사용하는데 Node.js가 설치될때 함께 설치됨<br>
+```jsx npm install <모듈이름>@<버전> ```
+
+#### request 모듈
+>웹 요청을 쉽게 만들어 주는 모듈<br>
+다음 명령어로 설치함<br>
+```jsx npm install request```
+설치한 외부 모듈은 내부 모듈처럼 require()함수로 사용함<br>
+```jsx const request = require('request')```
+request 모듈 설명은 GitHub 페이지에서 확인가능<br>
+
+#### cheerio 모듈
+>가져온 웹 페이지의 특정 위치에서 손쉽게 데이터 추출 가능<br>
+다음 명령어로 설치함<br>
+```jsx npm install cheerio```
+설치한 외부 모듈은 내부 모듈처럼 require()함수로 사용함<br>
+```jsx const cheerio = require('cheerio') ```
+cheerio 모듈 설명은 GitHub 페이지에서 확인가능<br>
+
+#### async 모듈
+>Node.js는 대부분의 메소드가 비동기적으로 구성되므로 실행순서를 정의하기가 어렵고 들여쓰기도 많음<br>
+이 문제를 어느정도 해결해 줄수 있는 모듈<br>
+다음 명령어로 설치함<br>
+```jsx npm install async ```
+다음 방법으로 추출함<br>
+```jsx const async = require('async')```
 
 ## [05월 11일]
 #### DATA 객체
