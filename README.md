@@ -1,4 +1,157 @@
 # 강태훈 [201840104]
+## [06월 01일]
+#### 사용할 수 없는 코드
+>let,const,템플릿 문자열,화살표 함수,for of반복문 은 ECMAScript6에서 추가된 기능으로 구 버전의 웹 브라우저에서는 사용할 수 없다<br>
+var와 function(),for in 반복문을 사용하여 표현할수 있다.<br>
+
+#### 브라우저 객체 모델
+>웹 브라우저와 관련된 객체를 브라우저 객체 모델(BOM,Browser Objext Model)이라고 한다.<br>
+
+#### window 객체
+>window 객체는 웹 페이지 자체를 나타냄<br>
+>>arlert(메세지)    경고장을 출력<br>
+>>prompt(메시지)    프롬프트 출력<br>
+
+#### secreen 객체
+>웹 브라우저 화면이 아니라 운영체제 화면의 속성을 가지므로 웹 브라우저마다속성이 다르다.<br>
+모든 웹 브라우저에서 공통으로 쓸 수있는 속성을 아래와 같다.<br>
+>>width         화면의 너비<br>
+>>height        화면의 높이<br>
+>>availWidth    실제 화면에서 사용가능한 너비<br>
+>>availHeight   실제 화면엘서 사용가능한 높이<br>
+>>colorDepth    사용 가능한 색상 수<br>
+>>pixelDepth    한 픽셀당 비트 수<br>
+
+#### location 객체와 history 객체
+>location 객체는 웹 브라우저의 주소창과 관련됨<br>
+location 객체는 프로토콜의 종류,호스트이름,문서 위치 등 정보가 있음.<br>
+모든 웹 브라우저에서 공통으로 쓸 수있는 속성을 아래와 같다.<br>
+>>href      문서의 URL 주소 <br>
+>>host      호스트 이름과 포트 번호      localhost:52273<br>      
+>>hostname  호스트 이름                 localhost<br>
+>>port      포트 번호                   52273<br>
+>>pathname  디렉터리 경로               /folder/HTMLpage.html<br>
+>>hash      앵커 이름(#~)               #test<br>
+>>search    요청 매개변수               ?param=10<br>
+>>protocol  프로토콜 종류               http:<br>
+
+>메소드는 아래와 같다<br>
+>>assign(링크)  매개변수로 전달한 위치로 이동함<br>
+>>reload()      새로고침<br>
+>>replace()     매개 변수로 전달한 위치로 이동합니다(뒤로가기 불가능)<br>
+
+#### navigator 객체
+>navigator 객체에는 웹 페이지를 실행하는 웹 브라우저 정보가 들어 있음<br>
+>>appCodeName       웹 브라우저의 코드 이름<br>
+>>appName           웹 브라우저의 이름<br>
+>>appVersion        웹 브라우저의 버전<br>
+>>platform          사용중인 운영체제의 시스템 환경<br>
+>>userAgent         웹 브라우저의 전체적인 정보<br>
+
+#### 문서 객체 모델 관련 용어
+>웹 브라우저에서 HTML파일을 끌어다 놓으면 웹 브라우저는 HTML파일을 분석해 화면에 출력함<br>
+이때 웹 브라우저가 HTML파일을 분석하고 출력하는 방식을 문서 객체 모델이라고 함<br>
+
+#### 웹 페이지 생성 순서
+>처음 HTML 페이지를 실행하면 Process - 0 문자열을 출력함 -><br>
+이어서 웹 브라우저가 코드를 읽으며 h1 태그 내부에 있는 Process - 1 문자열을 출력함.<br>
+곧바로 아래의 script 태그를 실행하므로 Process - 2 문자열을 출력함 -><br>
+경고창을 닫으면 다시 HTML 페이지를 읽으며 h2 태그 내부에 있는 Process - 2 문자열을 출력함<br>
+아래의 태그를 읽으며 Process - 3 문자열을 출력<br>
+
+#### 문서 객체 선택
+>이미 있는 HTML 태그를 js에서 문서 객체로 변환하는 것을 문서 객체 선택이라고 함<br>
+문서 객체를 선택하면 js로 실행중에 내부 글자를 변경하거나 스타일을 변경할 수 있다<br>
+###### 1개의 문서 객체 선택
+>>document.getElementByle(아이디)       아이디를 사용해 문서 객체를 선택함<br>
+>>document.querySelector(선택자)        선택자를 사용해 문서 객체를 선택함<br>
+###### 여러개의 문서 객체 선택
+>>document.getElementsByName(이름)      name 속성으로 여러개의 문서 객체를 선택함<br>
+>>document.getElementsByClassName(클래스)   class 속성으로 여러개의 문서 객체를 선택함<br>
+>>document.querySelector(선택자)        선택자로 여러개의 문서 객체를 선택함<br>
+
+#### 문서 객체 조작
+>문서 객체는 문자,속성,스타일을 조작할수 있음<br>
+문서 객체 내부의 문자를 조작할 때는 innerHTML 속성을 사용함<br>
+>>innerHTML  문서 객체 내부의 글자를 나타냄<br>
+###### 스타일 조작
+- 스타일 시트의 스타일 속성      js의 스타일 속성<br>
+>>background-color      backgroundColor<br>
+border-radius           borderRadius<br>
+border-bottom           borderBottom<br>
+###### 속성 조작
+>>setAttribute(속성 이름,속성 값)    속성을 지정함<br>
+getAttribute(속성 이름)              속성을 추출함<br>
+
+#### 이벤트
+>자바는 기본적으로 다음이벤트를 지원함<br>
+>- 마우스 이벤트<br>
+>- 키보드 이벤트<br>
+>- HTML 프레임 이벤트<br>
+>- HTML 입력 양식 이벤트<br>
+>- 사용자 인터페이스 이벤트<br>
+>- 구조 변화 이벤트<br>
+>- 터치 이벤트<br>
+
+#### jQuery 객체
+>jQuery 라이브러리는 $함수를 활용함<br>
+>>$(<매개변수>)메소드(<매개변수>,<매개변수>)<br>
+>- ex)<br>
+window.jQuery - window.$ = jQuery;<br>
+
+#### 문서 객체 선택
+>>parent()      부모 태그를 선택함<br>
+>>find()        후손 태그를 찾음<br>
+
+#### 문서 객체 개별 조작
+>$() 함수를 사용하면 여러개의 문서 객체를 선택할 수 있음<br>
+>>length        선택된 문서 객체의 수를 구함<br>
+>>get()         선택한 문서 객체 중 하나를 선택함<br>
+>>each()        선택한 문서 객체에 반복을 적용함<br>
+
+#### 문서 객체 조작
+>>text()        html 태그 내부의 문서를 조작함<br>
+>>html()        html 태그 내부의 문자를 조작함<br>
+###### 스타일 조작
+>>css()         스타일을 조작함<br>
+
+#### 문서 객체 생성
+>>$(<A>.prependTo(<B>))     A를 B안쪽 앞에 추가함<br>
+$(<A>.apendTo(<B>))         A를 B안쪽 뒤에 추가함<br>
+$(<A>.insertBefore(<B>))    A를 B앞에 추가함<br>
+$(<A>.insertAfter(<B>))     A를 B뒤에 추가함<br>
+
+#### 이벤트
+>>on()      이벤트를 연결함<br>
+>>off()     이벤트를 제거함<br>
+###### 이벤트직접연결
+>$(<선택자>).on(<이벤트 이름>,<콜백 함수>)<br>
+>- 키보드 이벤트<br>
+>ketdown()      키보드 키를 눌렀을때<br>
+keypress()      키가 입력되었을 때<br>
+ketup()         키보드 키를 떼었을 대<br>
+>- 마우스 이벤트<br>
+click()         마우스를 클릭했을때<br>
+dbclick()         마우스를 더블클릭 했을때<br>
+mousedown()     마우스 버튼을 눌렀을 때<br>
+mouseenter()    마우스 커서가 해당 태그로 들어갔을 때<br>
+mouseleave()    마우스 커서가 해당 태그를 나갔을 때<br>
+mousemove()     마우스가 움직일 때<br>
+mouseup()       마우스 버틀을 땔 때<br>
+>- 입력 양식 이벤트<br>
+blur()      입력 양식에 값 입력을 종료할 때<br>
+change()    입력 양식의 값이 변경될 때<br>
+focus()     입력 양식에 값 입력을 시작할 때<br>
+select()    type 속성이 select인 입력 양식의 목록에서 값을 선택했을 때<br>
+submit()    type 속성이 submit인 입력 양식을 클릭했을 때<br>
+>- 웹 브라우저 이벤트<br>
+resize()    웹 브라우저 크기를 변경할 때<br>
+scroll()    웹 브라우저를 스크롤할 때<br>
+
+#### 애니메이션
+>>animate()     애니메이션을 적용함
+>>$(<선택자>).animate(<속성>,<시간>,<콜백 함수>)<br>
+
 ## [05월 25일]
 #### 요청과 응답
 >웹 서버가 하는일은 요청과 응답의 연속으로 웹 브라우저에 웹페이지 주소를 입력하면 웹서버는 입력한 주소에 맞는 웹페이지를 제공함<br>
